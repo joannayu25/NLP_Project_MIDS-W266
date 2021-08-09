@@ -21,7 +21,7 @@ The main dataset, IMDb movie review dataset, is an ideal dataset for the propose
 
 
  t | **Postive** | **Negative** | **Total**
- ___ | ___ | ___ | ___ 
+ --- | --- | --- | --- 
 **Labeled Training Data** | 12,500 | 12,500 | 25,000
 **Test Data** | - | - | 25,000
 **Unlabeled Training Data** | - | - | 50,000
