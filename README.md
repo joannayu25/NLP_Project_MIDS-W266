@@ -20,11 +20,11 @@ learning. Research has shown that unlabeled data can improve adversarial robustn
 The main dataset, IMDb movie review dataset, is an ideal dataset for the proposed experiments since it contains a good amount of labeled and unlabeled examples. In addition, using a movie review dataset allows for the possibility of appending additional movie review data if one wishes to experiment with data beyond the size of the IMDb.
 
 
-| - | **Postive** | **Negative** | **Total**|
-| ___ | ___ | ___ | ___ |
-|**Labeled Training Data** | 12,500 | 12,500 | 25,000|
-|**Test Data** | - | - | 25,000|
-|**Unlabeled Training Data** | - | - | 50,000|
+ - | **Postive** | **Negative** | **Total**
+ ___ | ___ | ___ | ___ 
+**Labeled Training Data** | 12,500 | 12,500 | 25,000
+**Test Data** | - | - | 25,000
+**Unlabeled Training Data** | - | - | 50,000
 
 Dataset for domain relavance experimentations:
 
