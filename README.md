@@ -1,4 +1,7 @@
-# Final Project for NLP class in UC Berkeley MIDS Program W266
+# Unsupervised Data Augmentation Experimentations
+## Final Project for NLP W266 class
+
+UC Berkeley MIDS Program 
 
 Joanna Yu, Spring 2020
 
@@ -13,14 +16,17 @@ learning. Research has shown that unlabeled data can improve adversarial robustn
 2. Investigate how domain relevance of unlabeled data affects performance of the semi-supervised model.
 
 ### About the Data
+
 The main dataset, IMDb movie review dataset, is an ideal dataset for the proposed experiments since it contains a good amount of labeled and unlabeled examples. In addition, using a movie review dataset allows for the possibility of appending additional movie review data if one wishes to experiment with data beyond the size of the IMDb.
+
 _ | _ | _ | _
 _ | **Postive** | **Negative** | **Total**|
 **Labeled Training Data** | 12,500 | 12,500 | 25,000|
 **Test Data** | - | - | 25,000|
 **Unlabeled Training Data** | - | - | 50,000|
 
-Dataset for domain relavance experimentations
+Dataset for domain relavance experimentations:
+
 _ | _
 _ | **Domain Relevance**
 **IMDb Movie Reviews** | In-Domain
