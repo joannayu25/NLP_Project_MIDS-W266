@@ -58,6 +58,15 @@ Kaggle Natural Disaster Tweets | Out-of-Domain
 #### Relationship between Labeled and Unlabeled Data
 ![UDA Comparison](/images/imdb_UDA_comparison.png)
 
+#### Effect of Domain Relevance
+A common belief is that domain relevance should play a role in semi-supervised learning and that fine-tuning with out-of-domain data will not benefit the model as much as in-domain data would. The results are surprising in two ways:
+
+1. The performance of the model seems to rely much more heavily on the amount of labeled data than the domain relevance of the unlabeled data.
+
+2. Longer text in the unlabeled dataset does not lead to any noticeable benefit to model performance.
+
+![Domain Relevance](/images/domain_relevance_blue.png)
+
 
 The `UDA main` notebook contains the experimentation done in this project. The `results` notebook contains the results and graphs.
 
