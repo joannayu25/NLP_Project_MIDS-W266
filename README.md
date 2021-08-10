@@ -6,8 +6,7 @@ UC Berkeley MIDS Program
 Joanna Yu, Spring 2020
 
 ### Introduction
-While there has been rapid development in the field of Natural Language Processing in the last decade, the scarcity of labeled data remains a problem and researchers are looking for better ways to make use of the abundant unlabeled data for semisupervised
-learning. Research has shown that unlabeled data can improve adversarial robustness and consistency training is among those that show great promises. The recent work done by Google, titled “Unsupervised Data Augmentation for Consistency Training”, shows that back-translation, as an advanced data augmentation technique, is an effective way to improve model performance. This work focuses on expanding the framework from the paper to further investigate the tradeoff between labeled and unlabeled data and the role of domain relevance in semi-supervised learning using unsupervised data augmentation.
+While there has been rapid development in the field of Natural Language Processing in the last decade, the scarcity of labeled data remains a problem. Research has shown that unlabeled data can improve adversarial robustness and consistency training is among those that show great promises. The recent work done by Google, titled “Unsupervised Data Augmentation for Consistency Training”, shows that back-translation, as an advanced data augmentation technique, is an effective way to improve model performance. This work focuses on expanding the framework from the paper to further investigate the tradeoff between labeled and unlabeled data and the role of domain relevance in semi-supervised learning using unsupervised data augmentation.
 
 ### Objective 
 
@@ -22,24 +21,44 @@ The main dataset, IMDb movie review dataset, is an ideal dataset for the propose
 
  **Data Type** | **Postive** | **Negative** | **Total**
  --- | --- | --- | --- 
-**Labeled Training Data** | 12,500 | 12,500 | 25,000
-**Test Data** | - | - | 25,000
-**Unlabeled Training Data** | - | - | 50,000
+Labeled Training Data | 12,500 | 12,500 | 25,000
+Test Data | - | - | 25,000
+Unlabeled Training Data | - | - | 50,000
 
 Dataset for domain relavance experimentations:
 
 **Dataset** | **Domain Relevance**
  --- | --- 
-**IMDb Movie Reviews** | In-Domain
-**Amazon Movie and TV Reviews** | In-Domain
-**Amazon Office Product Reviews** | Semi-In-Domain
-**Twitter Airline Sentiment** | Semi-In-Domain
-**Kaggle Natural Disaster Tweets** | Out-of-Domain
+IMDb Movie Reviews | In-Domain
+Amazon Movie and TV Reviews | In-Domain
+Amazon Office Product Reviews | Semi-In-Domain
+Twitter Airline Sentiment | Semi-In-Domain
+Kaggle Natural Disaster Tweets | Out-of-Domain
 
+### Experiments
+#### Environment
 
+* A series of notebooks and scripts are run on Google Colaboratory Pro using GPU/TPU environment. 
+* A large amount of Google Cloud Storage is used for this project due to the size of BERT and model checkpoint files. 
+* Depending on the total size of data being fine-tuned and trained, a single model takes 30 minutes to 6+ hours to run on a TPU.
 
+#### Metric - Error Rate
+
+#### Exploration of the Tradeoff between Labeled and Augmented Unlabeled Data
+
+* 7 different amounts of labeled data are selected. 
+* Model performances are tracked for every increase of 4,000 augmented unlabeled examples from 0 to 16,000, at which point the error rate begins to level off so additional models are run at 24,000, 48,000, and the full dataset of 69,972 examples.
+
+#### Exploration of the Effect of Domain Relevance
+* Unlabeled data is kept constant at 16,000 examples so the results are comparable across all datasets.
+* When feasible, only examples over 128 tokens are selected so training can be done on longer text.
+* Back-translation is performed to augment the unlabeled data.
 
 ### Results
+#### Relationship between Labeled and Unlabeled Data
+![Optional Text](../images/imdb_UDA_comparison.png)
+
+
 The `UDA main` notebook contains the experimentation done in this project. The `results` notebook contains the results and graphs.
 
 #### Acknowledgement
