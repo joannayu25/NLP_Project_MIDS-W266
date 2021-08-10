@@ -56,7 +56,7 @@ Kaggle Natural Disaster Tweets | Out-of-Domain
 
 ### Results
 #### Relationship between Labeled and Unlabeled Data
-![Optional Text](../images/imdb_UDA_comparison.png)
+![UDA Comparison](/images/imdb_UDA_comparison.png)
 
 
 The `UDA main` notebook contains the experimentation done in this project. The `results` notebook contains the results and graphs.
